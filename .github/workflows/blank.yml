@@ -57,6 +57,6 @@ jobs:
           IMAGE_TAG: team3-api
 
         run:
-          docker build -t ${ECR_REGISTRY}}/${ECR_REPOSITORY}:${IMAGE_TAG} --build-arg DB_USER=${DB_USER} --build-arg DB_PASSWORD=${DB_PASSWORD} --build-arg DB_USERNAME=${DB_USERNAME} --build-arg DB_HOST=${DB_HOST}
+          docker build -t ${ECR_REGISTRY}}/${ECR_REPOSITORY}:${IMAGE_TAG} --build-arg DB_USER=${DB_USER} --build-arg DB_PASSWORD=${DB_PASSWORD} --build-arg DB_USERNAME=${DB_USERNAME} --build-arg DB_HOST=${DB_HOST} .
           docker push 8080:8080 ${ECR_REGISTRY}/${ECR_REPOSITORY}:${IMAGE_TAG} .
 
